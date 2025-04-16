@@ -5,7 +5,7 @@ if (!$con) {
 }
 
 $id = intval($_GET['id']);
-$sql = "DELETE FROM employees WHERE id = $id";
+$sql = "DELETE FROM employee WHERE id = $id";
 
 if (mysqli_query($con, $sql)) {
   echo "Record deleted successfully.";

@@ -11,7 +11,7 @@ $salary = mysqli_real_escape_string($con, $_POST['salary']);
 $period = mysqli_real_escape_string($con, $_POST['period']);
 $benefit = mysqli_real_escape_string($con, $_POST['benefit']);
 
-$sql = "UPDATE employees SET names='$names', address='$address', salary='$salary', period='$period', benefit='$benefit' WHERE id=$id";
+$sql = "UPDATE employee SET names='$names', address='$address', salary='$salary', period='$period', benefit='$benefit' WHERE id=$id";
 
 if (mysqli_query($con, $sql)) {
   echo "Record updated successfully";

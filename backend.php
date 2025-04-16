@@ -4,7 +4,7 @@ $con=mysqli_connect(hostname: "localhost",username: "root",password: "", databas
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-echo "Connected successfully";
+//echo "Connected successfully";
 // escape variables for security
 $names = mysqli_real_escape_string(mysql: $con, string: $_POST['names']);
 $address = mysqli_real_escape_string(mysql: $con, string: $_POST['address']);
@@ -33,7 +33,7 @@ if ($period <= 0) {
     // redirect to assigment.php
 }
 
-$sql="INSERT INTO employees (names, address, salary, period, benefit)      VALUES ('$names', '$address', '$salary', '$period', '$benefit')";
+$sql="INSERT INTO employee (names, address, salary, period, benefit)   VALUES ('$names', '$address', '$salary', '$period', '$benefit')";
 if (!mysqli_query(mysql: $con,query: $sql)) {
        die('Error: ' . mysqli_error(mysql: $con));
 }

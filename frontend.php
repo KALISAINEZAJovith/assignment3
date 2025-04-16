@@ -262,7 +262,7 @@
 
           <div class="actions">
           <button type="submit" id="submitButton">Submit</button>
-          <button type="reset" onclick="resetForm()">Clear</button>
+          <button type="reset" onclick="resetForm()">delete</button>
         </div>
           <?php
           $con = mysqli_connect("localhost", "root", "", "users");
@@ -270,7 +270,7 @@
             die("Connection failed: " . mysqli_connect_error());
           }
 
-          $result = mysqli_query($con, "SELECT * FROM employees");
+          $result = mysqli_query($con, "SELECT * FROM employee");
 
           echo "<h3 style='text-align:center; padding:10px;'>Employee Records</h3>";
           echo "<table border='1' cellspacing='0' cellpadding='6' style='width: 100%; border-collapse: collapse; margin-bottom: 20px;'>
